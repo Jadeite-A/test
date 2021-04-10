@@ -150,6 +150,14 @@
         </div>
         <div class="blank"></div>
 
+        <!-- <div>
+          <div v-for="(value, index) in img" :key="index">
+            <img :src="value.url" width="42" height="42" /><br />{{
+              value.test
+            }}
+          </div>
+        </div> -->
+
         <!--国防专题 -->
         <div class="content-defense">
           <div class="content-defense-title">
@@ -173,12 +181,10 @@
         </div>
         <div class="content-gray-block"></div>
 
-      <!--机构  -->
-
-
+        <!--机构  -->
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -189,6 +195,13 @@ export default {
   },
   data() {
     return {
+      // img: [
+      //   {
+      //     url: require("../assets/logo.png"),
+      //     test: "aa",
+      //   },
+      // ],
+
       topBarData: [
         "首页",
         "新闻动态",
@@ -624,7 +637,7 @@ export default {
   background-repeat: no-repeat;
   //background-color: rgb(210, 230, 171);
 }
-.content-gray-block{
+.content-gray-block {
   background-color: #e5f2fd;
   height: 22px;
 }
@@ -811,10 +824,10 @@ export default {
         text-overflow: ellipsis;
         white-space: nowrap;
       }
-      .content-defense-content-left-font span{
+      .content-defense-content-left-font span {
         font-size: 14px;
         line-height: 24px;
-        color:  rgba(0, 0, 0, 0.35);
+        color: rgba(0, 0, 0, 0.35);
       }
       .content-defense-content-right-font {
         font-family: "宋体";
@@ -826,12 +839,28 @@ export default {
 }
 
 //机构
-.content-institutions{
+.content-institutions {
   width: 1200px;
   height: 472px;
+  .title {
+  }
+  .institutions {
+    .institution {
+      .institution-icon {
+      }
+      .institution-detail {
+        .title {
+        }
+        .sub-title {
+        }
+        .btns {
+          .btn {
+          }
+        }
+      }
+    }
+  }
 }
-
-
 
 ul {
   list-style-type: square;
